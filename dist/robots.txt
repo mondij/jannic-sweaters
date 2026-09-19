@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jannic-sweaters.vercel.app/sitemap.xml
+
+# Disallow admin or system paths (add as needed)
+# Disallow: /admin/

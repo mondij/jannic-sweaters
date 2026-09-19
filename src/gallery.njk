@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: Gallery
+description: Browse our portfolio of school sweaters, corporate uniforms, security wear, and custom embroidery work by Jannic Spinners.
+---
+
+<div class="page-hero">
+    <div class="section-label">Portfolio</div>
+    <h1>Our work</h1>
+    <p>A sample of the uniforms, sweaters, and custom pieces we've produced. Replace these placeholders with real photos as your portfolio grows.</p>
+</div>
+
+<section class="section alt-bg">
+    <div class="section-inner">
+        <div class="gallery-filters" id="galleryFilters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="school">School</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+            <button class="filter-btn" data-filter="embroidery">Embroidery</button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+        </div>
+
+        <div class="gallery-full-grid" id="galleryGrid">
+            <div class="gallery-full-item" data-category="school">
+                <img src="/assets/images/school-1.jpg" alt="School sweater - students wearing uniform sweaters">
+            </div>
+            <div class="gallery-full-item" data-category="school">
+                <img src="/assets/images/school-2.jpg" alt="School uniform - blue sweater close-up">
+            </div>
+            <div class="gallery-full-item" data-category="corporate">
+                <img src="/assets/images/corporate-1.jpg" alt="Corporate uniform - professional business attire">
+            </div>
+            <div class="gallery-full-item" data-category="corporate">
+                <img src="/assets/images/corporate-2.jpg" alt="Corporate wear - office uniform">
+            </div>
+            <div class="gallery-full-item" data-category="corporate">
+                <img src="/assets/images/corporate-3.jpg" alt="Corporate apparel - branded staff wear">
+            </div>
+            <div class="gallery-full-item" data-category="security">
+                <img src="/assets/images/security-jacket.jpg" alt="Security jacket - professional guard uniform">
+            </div>
+            <div class="gallery-full-item" data-category="security">
+                <img src="/assets/images/uniform-1.jpg" alt="Security uniform - complete guard attire">
+            </div>
+            <div class="gallery-full-item" data-category="embroidery">
+                <img src="/assets/images/embroidery-1.jpg" alt="Custom embroidery work - logo stitching">
+            </div>
+            <div class="gallery-full-item" data-category="embroidery">
+                <img src="/assets/images/embroidery-2.jpg" alt="Badge printing and embroidery application">
+            </div>
+            <div class="gallery-full-item" data-category="personal">
+                <img src="/assets/images/sweater-1.jpg" alt="Personal custom sweater order">
+            </div>
+            <div class="gallery-full-item" data-category="personal">
+                <img src="/assets/images/sweater-2.jpg" alt="Custom made personal sweater">
+            </div>
+            <div class="gallery-full-item" data-category="personal">
+                <img src="/assets/images/personal-1.jpg" alt="Individual custom order sweater">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="cta-strip">
+    <h2>Like what you see?</h2>
+    <p>Get in touch to discuss your order — we'll quote within 24 hours.</p>
+    <div class="cta-strip-actions">
+        <a href="/contact/" class="btn-white">Request a quote</a>
+        <a href="https://wa.me/256783169770" class="btn-outline-white" target="_blank" rel="noopener">💬 WhatsApp us</a>
+    </div>
+</div>
+
+<script>
+    const filters = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.gallery-full-item');
+
+    filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filters.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            items.forEach(item => {
+                item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'flex' : 'none';
+            });
+        });
+    });
+</script>

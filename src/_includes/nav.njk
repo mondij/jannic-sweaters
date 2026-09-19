@@ -1,0 +1,31 @@
+<header>
+    <nav>
+        <a href="/" class="logo">
+            <span class="logo-dot"></span>
+            Jannic Spinners
+        </a>
+        <ul>
+            <li><a href="/" class="{{ page.url | active('/') }}">Home</a></li>
+            <li><a href="/services/" class="{{ page.url | active('/services/') }}">Services</a></li>
+            <li><a href="/gallery/" class="{{ page.url | active('/gallery/') }}">Gallery</a></li>
+            <li><a href="/faq/" class="{{ page.url | active('/faq/') }}">FAQ</a></li>
+            <li><a href="/contact/" class="nav-cta {{ page.url | active('/contact/') }}">Get a Quote</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+    <div class="mobile-nav-panel">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Get a Quote</a>
+    </div>
+</div>

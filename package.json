@@ -1,0 +1,12 @@
+{
+  "name": "jannic-sweaters",
+  "version": "1.0.0",
+  "description": "Jannic Spinners — Quality Sweater Manufacturers, Uganda",
+  "scripts": {
+    "dev": "eleventy --serve --input=src --output=dist",
+    "build": "eleventy --input=src --output=dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
